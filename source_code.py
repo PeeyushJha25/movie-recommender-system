@@ -3,8 +3,8 @@ import pandas as pd
 import ast
 
 
-movies = pd.read_csv('/archive/tmdb_5000_movies.csv')
-credits = pd.read_csv('/archive/tmdb_5000_credits.csv') 
+movies = pd.read_csv('tmdb_5000_movies.csv')
+credits = pd.read_csv('tmdb_5000_credits.csv') 
 
 movies = movies.merge(credits,on='title')
 movies = movies[['movie_id','title','overview','genres','keywords','cast','crew']]
